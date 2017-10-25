@@ -1,0 +1,14 @@
+rails -v
+rails new Market7
+rails server
+
+C:\Users\Admin\Desktop>git config --global user.name "yuppies7"
+C:\Users\Admin\Desktop>git config --global user.email"andrea.cappicciola@gmail.com"
+git init
+git status
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/yuppies7/Market7.git
+
+rake routes
+rails s
