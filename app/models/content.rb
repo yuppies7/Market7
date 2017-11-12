@@ -8,4 +8,10 @@ class Content < ApplicationRecord
   has_attached_file :allegato
   validates_attachment_content_type :allegato, :content_type => [ /^image\/(png|gif|jpeg)/,'application/pdf'],
   message: "Formato non supportato"
+
+  validates :title, :description, :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
+  validates :cover, attachment_presence: true
+  validates :allegato, attachment_presence: true
+
 end
